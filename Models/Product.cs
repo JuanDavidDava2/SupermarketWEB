@@ -18,6 +18,6 @@ namespace SupermarketWEB.Models
 
 		public int CategoryId { get; set; } //Sera la llave foranea
 
-		public Category Category { get; set; } // propiedad de navegacion 
+		public Category? Category { get; set; } = default!;// propiedad de navegacion 
 	}
 }
