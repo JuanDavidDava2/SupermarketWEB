@@ -1,0 +1,48 @@
+﻿@page
+@model SupermarketWEB.Pages.Invoices.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Invoice.Number" class="control-label"></label>
+                <input asp-for="Invoice.Number" class="form-control" />
+                <span asp-validation-for="Invoice.Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Invoice.CustomerId" class="control-label"></label>
+                <input asp-for="Invoice.CustomerId" class="form-control" />
+                <span asp-validation-for="Invoice.CustomerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Invoice.Date" class="control-label"></label>
+                <input asp-for="Invoice.Date" class="form-control" />
+                <span asp-validation-for="Invoice.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Invoice.PaymodeId" class="control-label"></label>
+                <input asp-for="Invoice.PaymodeId" class="form-control" />
+                <span asp-validation-for="Invoice.PaymodeId" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn-success" />
+                <a asp-page="Index" class="btn btn-primary">Back to List</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

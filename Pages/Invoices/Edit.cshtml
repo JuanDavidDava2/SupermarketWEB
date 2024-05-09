@@ -1,0 +1,42 @@
+﻿@page
+@model SupermarketWEB.Pages.Invoices.EditModel
+@{
+	ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Invoice</h4>
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form method="post">
+			<div asp-validation-sumary="ModelOnly" class="text-danger"></div>
+			<input type="hidden" asp-for="Invoice.Id" />
+			<div class="form-group">
+				<label asp-fpr="Invoice.Number" class="control-label"></label>
+				<input asp-for="Invoice.Number" class="form-control" />
+				<span asp-validation-for="Invoice.Number" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<label asp-fpr="Invoice.CustomerId" class="control-label"></label>
+				<input asp-for="Invoice.CustomerId" class="form-control" />
+				<span asp-validation-for="Invoice.CustomerId" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<label asp-fpr="Invoice.Date" class="control-label"></label>
+				<input asp-for="Invoice.Date" class="form-control" />
+				<span asp-validation-for="Invoice.Date" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<label asp-fpr="Invoice.PaymodeId" class="control-label"></label>
+				<input asp-for="Invoice.PaymodeId" class="form-control" />
+				<span asp-validation-for="Invoice.PaymodeId" class="text-dager"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="save" class="btn btn-success" />
+				<a asp-page="./Index" class="btn btn-primary">Back to List</a>
+			</div>
+		</form>
+	</div>
+</div>
