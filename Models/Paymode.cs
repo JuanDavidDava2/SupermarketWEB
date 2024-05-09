@@ -5,6 +5,8 @@
         public int Id { get; set; }
         public string Name { get; set; }
         public string Observation { get; set; }
-        public ICollection<Invoice>? Invoices { get; set; } = default;// Propiedad de navegación
+         public int InvoiceId { get; internal set; }
+        public ICollection<Invoice>? Invoices { get; set; } = default!;// Propiedad de navegación
+        
     }
 }

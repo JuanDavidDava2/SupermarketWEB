@@ -17,7 +17,7 @@ namespace SupermarketWEB.Pages.Paymodes
         public IList<PayMode> PayModes { get; set; }
         public async Task OnGetAsync()
         {
-            PayModes = await _context.Pay_modes.ToListAsync();
+            PayModes = await _context.PayModes.ToListAsync();
         }
 
 
